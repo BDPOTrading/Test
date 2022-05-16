@@ -4,11 +4,24 @@ import os
 import datetime as dt
 from datetime import timedelta
 from dateutil.relativedelta import relativedelta
+import time
 
 start=dt.date(2021, 1, 1)
 Symbol = 'ADA-USDT'
-st.title(Symbol)
-st.header('The Cracked Strat')
+
+
+
+
+sidebar = st.sidebar.selectbox(
+    "Select a strat to see results?",
+    ("Breakout", "Mean reversion", "Coming soon")
+)
+
+
+
+st.title(sidebar)
+
+
 
 col1, col2, col3 = st.columns(3)
 col1.metric("Profit", "1,428 USD", "243 USD")
